@@ -1,0 +1,131 @@
+#body{
+    font-family: 'Candara';
+}
+
+.vector{
+    display: none;
+	position: fixed;
+    bottom: 0%;
+    right: 0%;
+    height: 40%;
+	z-index: -1;
+    text-align: right;
+}
+h2 {
+    text-align: center;
+    margin-top: 2%;
+}
+img{
+    height: 100px;
+    text-align: center;
+    display:block;
+    margin:auto;
+}
+.titulo{
+    text-align: center;
+    top: 10%;
+    left: 11%;
+    border-bottom: 1px solid gray;
+}
+table {
+    width: 100%;
+    border: 1px solid #000;
+}
+
+th {
+    width: 25%;
+    text-align: center;
+    vertical-align: top;
+    border: 1px solid #000;
+    background-color: #BF2A04;
+    border-collapse: collapse;
+    padding: 0.3em;
+    caption-side: bottom;
+}
+
+ td{
+    width: 25%;
+    text-align: center;
+    vertical-align: top;
+    border: 1px solid #000;
+    border-collapse: collapse;
+    padding: 0.3em;
+    caption-side: bottom;
+ }
+
+ caption {
+    padding: 0.3em;
+    color: #fff;
+     background: #000;
+ }
+ th {
+    background: #BF2A04;
+ }
+
+ #resultado{
+    margin-top: 5%;
+    overflow:scroll;
+    width: 70%;
+    height: 235px;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+
+ @media (orientation: landscape), (min-width:1000px){
+    .vector{
+       display: none;
+    }
+}
+  
+  @media (orientation: portrait) {
+    .vector{
+        position: fixed;
+        bottom: 0%;
+        right: 0%;
+        height: 30%;
+        width: 40%;
+        z-index: -1;
+        text-align: right;
+        display: block;
+       }
+  }
+ @media  screen and (max-height:400px), (orientation:landscape){
+    #ayuda{
+        height: 100px;
+    }
+ }
+
+ @media screen and (max-width:900px),(max-height:900px),(orientation: portrait){
+	
+   #r{
+    bottom: 0%;
+    right: 0%;
+    height: 200px;
+    margin-top: 20%;
+   }
+   
+  
+   h2{
+       font-size: 38px;
+   }
+   table{
+       font-size: 30px;
+   }
+   #resultado{
+     margin-top: 10%;
+     overflow:scroll;
+     width: 70%;
+     height: 235px;
+     margin-left: 15%;
+     margin-right: 15%;
+   }
+}
+
+ 
+
+ 
+
+
+
+
+ 

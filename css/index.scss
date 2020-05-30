@@ -1,0 +1,530 @@
+html {
+    height: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    line-height: 1.43;
+    font-weight: 400;
+    height: 100%;
+    font-family: 'Poppins', serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+a:link {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+a:visited {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+h1, h2, h3, h4, h5, h6, ol, ul, li{
+    margin: 0;
+    padding: 0;
+}
+ul, ol {
+    list-style-type: none;
+}
+::selection{
+    color: #fff;
+    background-color: #555;
+}
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* barra superior*/
+.barra-superior {
+    position: relative;
+    height: 88px;
+    width: 100%;
+    border-bottom: 2px solid #ccc;
+    background-color: white;
+}
+.logo:link {
+    position: relative;
+    color: #484848;
+    transition: all 0.5s ease;
+    float: left;
+}
+.logo:hover {
+    background-color: #f2f2f2;
+}
+.logo img {
+    position: relative;
+    padding: 4px 9px;
+    width: 100%;
+    vertical-align: middle;
+    border-right: 2px solid #ccc;
+}
+
+/*barra de busqueda*/
+#barra-busqueda {
+    width: 360px;
+    height: 100%;
+    display: inline-block;
+}
+#barra-busqueda form input {
+    font-family: 'Roboto Slab', serif;
+    padding: 26px 3px 20px 45px;
+    box-sizing: border-box;
+    border: none;
+    width: 100%;
+    outline: none;
+    font-size: 120%;
+    background-image: url("../img/lupa.png");
+    background-repeat: no-repeat;
+    background-position: left;
+}
+#barra-busqueda form input::-webkit-input-placeholder {
+    color: #ccc;
+    font-size: 14px;
+}
+
+/*link de lado derecho de la barra de busqueda*/
+.barra-superior ul {
+    float: right;
+    padding: 21px 5px;
+}
+.barra-superior ul li{
+    display: inline-block;
+}
+.barra-superior ul li a:link{
+    color: #484848;
+    font-size: 16px;
+}
+.barra-superior ul li a:visited{
+    color: #484848;
+    font-size: 16px;
+}
+.opc {
+    display: inline-block;
+    text-align: center;
+}
+.barra-superior ul {
+    z-index: 10;
+}
+/* Es la seccion del usuario*/
+#espacio_usuario {
+    display: inline-block;
+    color: #318aac !important;
+    font-size: 20px;
+    font-weight: 500;
+    background: rgba(0,0,0,0);
+    border: 2px solid;
+    border-color: #318aac;
+    transition: all 1s ease;
+    padding: 0.35em 2em;
+    min-width: 200px;
+}
+
+#espacio_usuario:hover{
+    background: #318aac;
+    color: #fff !important;
+}
+#espacio_usuario li{
+    text-align: center;
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+/*Es su menu desplegable */
+.submenu {
+    position: absolute;
+    display: none;
+    background-color: white;
+}
+#espacio_usuario li:hover .submenu {
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    margin-top: 1%;
+}
+#espacio_usuario li:hover .submenu li {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border: 2px solid black;
+    border-bottom: 0px;
+    border-width: 50%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+#espacio_usuario li:hover .submenu li:hover {
+    background-color: #eee;
+}
+#espacio_usuario li:hover .submenu #sesion {
+    
+    border: 2px solid black;
+    border-width: 50%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+/*slider, el contenedor "seccion"*/
+#slider {
+    position: relative;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    max-width: auto;
+    scroll-snap-type: y mandatory;
+    background-color: #F7F7F7;
+    object-fit: cover;
+}
+#slider::-webkit-scrollbar{
+    display: none;
+}
+#slider div {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin: -2.5px;
+    padding: 0;
+    object-fit: cover;
+}
+
+/*primer slider*/
+#slider-1
+{
+    position: relative;
+    width: 100%;
+    object-fit: cover;
+    background-image: url("../img/compañero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#titulo-slider-1{
+    position: absolute ;
+    z-index: 3;
+    left: 12%;
+    top: 24%;
+    font-size: 500%;
+    color: white;
+    font-weight: 700;
+    font-family: 'Cambria Math', serif;
+    background-color: rgba(0,0,0,.7);
+    border-radius: 17px 17px 17px 17px;
+    -moz-border-radius: 17px 17px 17px 17px;
+    -webkit-border-radius: 17px 17px 17px 17px;  
+    padding-left: 5px;  
+}
+#texto-slider-1 {
+    position: absolute;
+    color: white;
+    top: 39%;
+    left: 10%;
+    right: 10%;
+    z-index: 2;
+    text-align: justify;
+    opacity: 1.0;
+    background-color: rgba(0,0,0,.7);
+    font-size: 150%;
+}
+#compartir {
+    position: absolute !important;
+    z-index: 3;
+    top: 15%;
+    left: 65%;
+    width: 400px;
+    height: 400px;
+    opacity: 1.0;
+}
+
+/*Segundo slider*/
+#slider-2
+{
+    position: relative;
+    width: 100%;
+    object-fit: cover;
+    background-image: url("../img/compartir.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#titulo-slider-2{
+    color: white;
+    position: absolute ;
+    z-index: 3;
+    top: 38%;
+    font-size: 590%;
+    font-weight: 800;
+    position: center;
+    left: 15%;
+    right: 15%;
+    background-color: rgba(0,0,0,.7);
+    border-radius: 17px 17px 17px 17px;
+    -moz-border-radius: 17px 17px 17px 17px;
+    -webkit-border-radius: 17px 17px 17px 17px;
+    padding-bottom: 8px;
+    padding-left: 5px;
+}
+#texto-slider-2{
+    position: absolute;
+    top: 55%;
+    left: 10%;
+    right: 22%;
+    margin-right: 30%;
+    z-index: 2;
+    text-align: justify;
+    color: black;
+    background-color: rgba(245,245,245,0.6);
+    font-size: 150%;
+}
+#texto-slider-2-2{
+    position: absolute;
+    color: black;
+    top: 55%;
+    left: 52%;
+    right: 10%;
+    z-index: 2;
+    text-align: justify;
+    background-color: rgba(245,245,245,0.5);
+    font-size: 150%;
+}
+#linea {
+    position: absolute;
+    border-right: 2px solid rgb(0, 0, 0);
+    height: 200px;
+    z-index: 3;
+    margin-left: 50%;
+    margin-right: 50%;
+    margin-top: 25%;
+}
+
+/*Tercer slider*/
+#slider-3
+{
+    position: relative;
+    width: 100%;
+    background-image: url("../img/renta.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#titulo-slider-3{
+    position: absolute ;
+    z-index: 3;
+    left: 50%;
+    top: 28%;
+    font-size: 600%;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 17px 17px 17px 17px;
+    -moz-border-radius: 17px 17px 17px 17px;
+    -webkit-border-radius: 17px 17px 17px 17px;
+    padding-left: 5px;
+}
+#texto-slider-3{
+    position: absolute;
+    color: black;
+    top: 42%;
+    left: 45%;
+    right: 10%;
+    z-index: 2;
+    text-align: justify;
+    color: white;
+    background-color: rgba(0,0,0,0.6);
+    font-size: 150%;
+}
+#renta {
+    position: absolute !important;
+    z-index: 3;
+    top: 30%;
+    left: 15.5%;
+    width: 400px ;
+    height: 400px ;
+}
+
+/*Cuarto slider*/
+#slider-4
+{
+    position: relative;
+    width: 100%;
+    background-image: url("../img/venta.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#titulo-slider-4{
+    position: absolute ;
+    z-index: 3;
+    left: 34%;
+    right: 34%;
+    top: 20%;
+    font-size: 600%;
+    color: white;
+
+    background-color: rgba(0,0,0,.7);
+    border-radius: 17px 17px 17px 17px;
+    -moz-border-radius: 17px 17px 17px 17px;
+    -webkit-border-radius: 17px 17px 17px 17px;
+    padding-left: 5px;
+
+}
+#texto-slider-4 {
+    position: absolute; 
+    top: 35%;
+    text-align: center;
+    left: 13%;
+    margin-left: 7%;
+    margin-right: 25%;
+    z-index: 2;
+    color: white;
+    font-size: 150%;
+    opacity: 1.0;
+    background-color: rgba(0,0,0,.7);
+    
+}
+#venta {
+    position: absolute !important;
+    z-index: 3;
+    top: 25%;
+    left: 39%;
+    width: 280px;
+    height: 280px; 
+}
+
+/* seccion de resultado cuando se busca algo */
+.seccion_resultados {
+    width: 92%;
+    margin-top: 3.5%;
+    margin-left: 4%;
+    margin-right: 4%;
+    word-wrap: break-word;
+}
+.izquierda{
+    max-width: 500px;
+    border-bottom: 1px solid grey;
+}
+.contenido{
+    margin-top: 3em;
+    display: inline-block;
+    border-bottom: 1px solid grey;
+    width: 100%;
+    max-width: 75%;
+    word-wrap: break-word;
+}
+.seccion-horizontal {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+
+
+/*
+    animacion //////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:500,700');
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	background-color: #dedede;
+}
+
+h1 {
+	position: relative;
+	display: block;
+	margin: 0;
+	font-size: 4rem;
+	line-height: 1;
+	transform: translateY(6rem);
+	animation: up 500ms linear forwards;
+	z-index: 1;
+	text-shadow: 0px 1px 1px rgba(255,255,255,1);
+	
+	&::before,
+	&::after {
+		position: absolute;
+		content: '';
+		width: 0px;
+		height: 1px;
+		left: 0;
+		background-color: rgba(0,0,0,0.2);
+		z-index: -1;
+	}
+	
+	&::before {
+		top: 1.4rem;
+		animation: draw 500ms linear 1s forwards;
+	}
+	
+	&::after {
+		bottom: 0.4rem;
+		animation: draw 500ms linear 1s forwards;
+	}
+	
+}
+
+.title-container {
+	font-size: 0;
+	position: relative;
+	padding-bottom: 0.4rem;
+}
+
+@keyframes up {
+	
+	100% {
+		transform: translateY(0);
+	}
+	
+}
+
+@keyframes draw {
+	
+	100% {
+		width: 100%;
+	}
+	
+}
+
+.rellenoBtn {
+    color: #318aac !important;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0.5em 1.2em;
+    background: rgba(0,0,0,0);
+    border: 2px solid;
+    border-color: #318aac;
+    transition: all 1s ease;
+    position: relative;
+  }
+  .rellenoBtn:hover {
+    background: #318aac;
+    color: #fff !important;
+  }
+
+  /*
+  Animacion para los titulos ///////////////////////////////////////////////////////
+  */
+
+  
+
+//MOBILE FIRST
+@media screen and (min-width:500px),(orientation: portrait){
+
+
+}
